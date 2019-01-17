@@ -1,0 +1,215 @@
+@background-color-main: #267ADE;
+@background-color-fill: #F2F614;
+@background-color-box: #224273;
+@background-color-menubar-hover: white;
+@main-text-color: #F2F614;
+@cont-text-color: #224273;
+@text-color-box: white;
+@line-color: #F2F614;
+@cont-line-color: #224273;
+
+body {
+    background-color: @background-color-main;
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    color: @main-text-color;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+    width: 25%;
+    height: 320px;
+    background: url("pic/Image-2.png") no-repeat 110px 10px;
+    background-size: contain;
+    float: left;
+    
+}
+.name {
+    width: 75%;
+    height: 240px;
+    font-size: 80px;
+    float: right;
+    border-bottom: 2px solid desaturate(@main-text-color, 80%);
+    padding-left: 10px;
+}
+
+.menubar {
+    padding: 0;
+    margin: 0;
+}
+
+.menubar > li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+
+.menubar a{
+    text-decoration: none;
+    color: @main-text-color;
+    display: block;
+    border-left: 4px solid @line-color;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-right: -6px;
+    padding: 0 15px;
+}
+
+.menubar > li:last-child a {
+    border-right: 4px solid @line-color;
+}
+
+.menubar a:hover {
+    background-color: @background-color-menubar-hover;
+    color: @cont-text-color;
+    border-left: 4px solid @cont-line-color;
+    z-index: 1;
+}
+
+.menubar .menubar-sub {
+    list-style: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    display: none;
+    
+}
+
+.menubar > li:hover .menubar-sub {
+    display: block;
+}
+
+.menubar-sub a {
+    background-color: @background-color-box;
+    color: @text-color-box;
+    margin: 0;
+    padding: 0 5px;
+    border-left: 4px solid @text-color-box;
+}
+
+.menubar-sub li a {
+    border-bottom: 1px solid @text-color-box;
+    border-right: 1px solid @text-color-box;
+    border-top: 1px solid @text-color-box;
+    margin-top: -1px;
+}
+
+.left-block {
+    padding: 0;
+    width: 25%;
+    padding-top: 30px;
+    padding-left: 60px;
+    float: left;
+    .matches {
+        border: 2px solid @line-color;
+        vertical-align: middle;
+        font-size: 18px;
+        width: 380px;
+    }
+}
+.left-block table {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+.matches caption {
+            color: @cont-text-color;
+            background-color: @background-color-fill;
+            font-size: 22px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            vertical-align: middle;
+            padding: 0px;
+}
+
+.last-matches caption {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.next-matches caption {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    caption-side: bottom;
+}
+.matches tr td {
+            background-color: @background-color-box;
+            color: @text-color-box;
+            padding: 1px 15px;
+}
+.matches tr:first-child td {
+     padding-top: 10px;
+}
+ .matches tr:last-child td {
+     padding-bottom: 10px;   
+}
+
+.container{
+    width: 50%;
+    float: left;
+}
+#slider {
+    border: 2px solid @line-color;
+}
+
+.right-block {
+    padding-top: 30px;
+    padding-left: 20px;
+    margin: 0;
+    width: 25%;
+    float: right;
+}
+
+
+
+.championship caption {
+    color: @main-text-color;
+    background-color: @background-color-main;
+    font-size: 22px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    vertical-align: middle;
+    padding: 0px;
+    border-bottom: 2px solid @line-color;
+}
+
+#position,
+#games,
+#points {
+    width: 50px;
+}
+#team {
+    width:240px;
+}
+
+.right-block table {
+    text-align: center;
+    font-size: 18px;
+}
+
+.championship tr td {
+    padding: 1px 0;
+    text-transform: uppercase;
+}
+.championship tr:nth-child(even) td {
+    background-color: darken(@background-color-main,5%);
+}
+
+.championship tr:first-child td {
+    padding-top: 10px;
+}
+.championship tr:last-child td {
+    padding-bottom: 10px;
+}
+
+
